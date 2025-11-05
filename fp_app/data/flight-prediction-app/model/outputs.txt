@@ -1,0 +1,663 @@
+   FlightDate                                    Airline Origin Dest  \
+0  2022-04-04  Commutair Aka Champlain Enterprises, Inc.    GJT  DEN   
+1  2022-04-04  Commutair Aka Champlain Enterprises, Inc.    HRL  IAH   
+2  2022-04-04  Commutair Aka Champlain Enterprises, Inc.    DRO  DEN   
+3  2022-04-04  Commutair Aka Champlain Enterprises, Inc.    IAH  GPT   
+4  2022-04-04  Commutair Aka Champlain Enterprises, Inc.    DRO  DEN   
+5  2022-04-04  Commutair Aka Champlain Enterprises, Inc.    DEN  TUL   
+6  2022-04-04  Commutair Aka Champlain Enterprises, Inc.    IAH  LCH   
+7  2022-04-04  Commutair Aka Champlain Enterprises, Inc.    TYS  IAH   
+8  2022-04-04  Commutair Aka Champlain Enterprises, Inc.    IAH  AEX   
+9  2022-04-04  Commutair Aka Champlain Enterprises, Inc.    IAH  MOB   
+
+   Cancelled  Diverted  CRSDepTime  DepTime  DepDelayMinutes  DepDelay  ...  \
+0      False     False        1133   1123.0              0.0     -10.0  ...   
+1      False     False         732    728.0              0.0      -4.0  ...   
+2      False     False        1529   1514.0              0.0     -15.0  ...   
+3      False     False        1435   1430.0              0.0      -5.0  ...   
+4      False     False        1135   1135.0              0.0       0.0  ...   
+5      False     False         955    952.0              0.0      -3.0  ...   
+6      False     False        2139   2136.0              0.0      -3.0  ...   
+7      False     False        1129   1117.0              0.0     -12.0  ...   
+8      False     False        1424   1414.0              0.0     -10.0  ...   
+9      False     False         954    947.0              0.0      -7.0  ...   
+
+   WheelsOff  WheelsOn  TaxiIn  CRSArrTime  ArrDelay  ArrDel15  \
+0     1140.0    1220.0     8.0        1245     -17.0       0.0   
+1      744.0     839.0     9.0         849      -1.0       0.0   
+2     1535.0    1622.0    14.0        1639      -3.0       0.0   
+3     1446.0    1543.0     4.0        1605     -18.0       0.0   
+4     1154.0    1243.0     8.0        1245       6.0       0.0   
+5     1017.0    1234.0     4.0        1240      -2.0       0.0   
+6     2147.0    2213.0     5.0        2231     -13.0       0.0   
+7     1139.0    1255.0    16.0        1306       5.0       0.0   
+8     1430.0    1507.0     6.0        1524     -11.0       0.0   
+9     1004.0    1104.0     6.0        1121     -11.0       0.0   
+
+   ArrivalDelayGroups  ArrTimeBlk  DistanceGroup  DivAirportLandings  
+0                -2.0   1200-1259              1                   0  
+1                -1.0   0800-0859              2                   0  
+2                -1.0   1600-1659              2                   0  
+3                -2.0   1600-1659              2                   0  
+4                 0.0   1200-1259              2                   0  
+5                -1.0   1200-1259              3                   0  
+6                -1.0   2200-2259              1                   0  
+7                 0.0   1300-1359              4                   0  
+8                -1.0   1500-1559              1                   0  
+9                -1.0   1100-1159              2                   0  
+
+[10 rows x 61 columns](4078318, 61)<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 4078318 entries, 0 to 4078317
+Data columns (total 61 columns):
+ #   Column                                   Dtype  
+---  ------                                   -----  
+ 0   FlightDate                               object 
+ 1   Airline                                  object 
+ 2   Origin                                   object 
+ 3   Dest                                     object 
+ 4   Cancelled                                bool   
+ 5   Diverted                                 bool   
+ 6   CRSDepTime                               int64  
+ 7   DepTime                                  float64
+ 8   DepDelayMinutes                          float64
+ 9   DepDelay                                 float64
+ 10  ArrTime                                  float64
+ 11  ArrDelayMinutes                          float64
+ 12  AirTime                                  float64
+ 13  CRSElapsedTime                           float64
+ 14  ActualElapsedTime                        float64
+ 15  Distance                                 float64
+ 16  Year                                     int64  
+ 17  Quarter                                  int64  
+ 18  Month                                    int64  
+ 19  DayofMonth                               int64  
+ 20  DayOfWeek                                int64  
+ 21  Marketing_Airline_Network                object 
+ 22  Operated_or_Branded_Code_Share_Partners  object 
+ 23  DOT_ID_Marketing_Airline                 int64  
+ 24  IATA_Code_Marketing_Airline              object 
+ 25  Flight_Number_Marketing_Airline          int64  
+ 26  Operating_Airline                        object 
+ 27  DOT_ID_Operating_Airline                 int64  
+ 28  IATA_Code_Operating_Airline              object 
+ 29  Tail_Number                              object 
+ 30  Flight_Number_Operating_Airline          int64  
+ 31  OriginAirportID                          int64  
+ 32  OriginAirportSeqID                       int64  
+ 33  OriginCityMarketID                       int64  
+ 34  OriginCityName                           object 
+ 35  OriginState                              object 
+ 36  OriginStateFips                          int64  
+ 37  OriginStateName                          object 
+ 38  OriginWac                                int64  
+ 39  DestAirportID                            int64  
+ 40  DestAirportSeqID                         int64  
+ 41  DestCityMarketID                         int64  
+ 42  DestCityName                             object 
+ 43  DestState                                object 
+ 44  DestStateFips                            int64  
+ 45  DestStateName                            object 
+ 46  DestWac                                  int64  
+ 47  DepDel15                                 float64
+ 48  DepartureDelayGroups                     float64
+ 49  DepTimeBlk                               object 
+ 50  TaxiOut                                  float64
+ 51  WheelsOff                                float64
+ 52  WheelsOn                                 float64
+ 53  TaxiIn                                   float64
+ 54  CRSArrTime                               int64  
+ 55  ArrDelay                                 float64
+ 56  ArrDel15                                 float64
+ 57  ArrivalDelayGroups                       float64
+ 58  ArrTimeBlk                               object 
+ 59  DistanceGroup                            int64  
+ 60  DivAirportLandings                       int64  
+dtypes: bool(2), float64(18), int64(23), object(18)
+memory usage: 1.8+ GB
+         CRSDepTime       DepTime  DepDelayMinutes      DepDelay  \
+count  4.078318e+06  3.957885e+06     3.957823e+06  3.957823e+06   
+mean   1.329587e+03  1.334374e+03     1.601494e+01  1.309049e+01   
+std    4.904801e+02  5.056219e+02     5.231498e+01  5.332016e+01   
+min    1.000000e+00  1.000000e+00     0.000000e+00 -7.800000e+01   
+25%    9.140000e+02  9.170000e+02     0.000000e+00 -5.000000e+00   
+50%    1.320000e+03  1.325000e+03     0.000000e+00 -2.000000e+00   
+75%    1.735000e+03  1.744000e+03     1.100000e+01  1.100000e+01   
+max    2.359000e+03  2.400000e+03     7.223000e+03  7.223000e+03   
+
+            ArrTime  ArrDelayMinutes       AirTime  CRSElapsedTime  \
+count  3.954079e+06     3.944916e+06  3.944916e+06    4.078318e+06   
+mean   1.457886e+03     1.578307e+01  1.110075e+02    1.413211e+02   
+std    5.431841e+02     5.198424e+01  6.996246e+01    7.179635e+01   
+min    1.000000e+00     0.000000e+00  8.000000e+00   -4.800000e+01   
+25%    1.046000e+03     0.000000e+00  6.000000e+01    8.900000e+01   
+50%    1.500000e+03     0.000000e+00  9.400000e+01    1.240000e+02   
+75%    1.914000e+03     1.000000e+01  1.410000e+02    1.710000e+02   
+max    2.400000e+03     7.232000e+03  7.270000e+02    6.900000e+02   
+
+       ActualElapsedTime      Distance  ...       TaxiOut     WheelsOff  \
+count       3.944916e+06  4.078318e+06  ...  3.955652e+06  3.955652e+06   
+mean        1.358624e+02  7.978657e+02  ...  1.697375e+01  1.356576e+03   
+std         7.185501e+01  5.914742e+02  ...  9.495407e+00  5.075580e+02   
+min         1.400000e+01  3.100000e+01  ...  1.000000e+00  1.000000e+00   
+25%         8.300000e+01  3.680000e+02  ...  1.100000e+01  9.320000e+02   
+50%         1.190000e+02  6.430000e+02  ...  1.500000e+01  1.338000e+03   
+75%         1.670000e+02  1.035000e+03  ...  1.900000e+01  1.758000e+03   
+max         7.640000e+02  5.095000e+03  ...  2.210000e+02  2.400000e+03   
+
+           WheelsOn        TaxiIn    CRSArrTime      ArrDelay      ArrDel15  \
+count  3.954076e+06  3.954076e+06  4.078318e+06  3.944916e+06  3.944916e+06   
+mean   1.455073e+03  7.894387e+00  1.486058e+03  7.528486e+00  2.164715e-01   
+std    5.378428e+02  6.663118e+00  5.185078e+02  5.524625e+01  4.118393e-01   
+min    1.000000e+00  1.000000e+00  1.000000e+00 -1.000000e+02  0.000000e+00   
+25%    1.044000e+03  4.000000e+00  1.103000e+03 -1.400000e+01  0.000000e+00   
+50%    1.456000e+03  6.000000e+00  1.513000e+03 -5.000000e+00  0.000000e+00   
+75%    1.909000e+03  9.000000e+00  1.920000e+03  1.000000e+01  0.000000e+00   
+max    2.400000e+03  2.900000e+02  2.359000e+03  7.232000e+03  1.000000e+00   
+
+       ArrivalDelayGroups  DistanceGroup  DivAirportLandings  
+count        3.944916e+06   4.078318e+06        4.078318e+06  
+mean        -6.256103e-02   3.663516e+00        3.685098e-03  
+std          2.487442e+00   2.320848e+00        1.141331e-01  
+min         -2.000000e+00   1.000000e+00        0.000000e+00  
+25%         -1.000000e+00   2.000000e+00        0.000000e+00  
+50%         -1.000000e+00   3.000000e+00        0.000000e+00  
+75%          0.000000e+00   5.000000e+00        0.000000e+00  
+max          1.200000e+01   1.100000e+01        9.000000e+00  
+
+[8 rows x 41 columns]61Index(['FlightDate', 'Airline', 'Origin', 'Dest', 'Cancelled', 'Diverted',
+       'CRSDepTime', 'DepTime', 'DepDelayMinutes', 'DepDelay', 'ArrTime',
+       'ArrDelayMinutes', 'AirTime', 'CRSElapsedTime', 'ActualElapsedTime',
+       'Distance', 'Year', 'Quarter', 'Month', 'DayofMonth', 'DayOfWeek',
+       'Marketing_Airline_Network', 'Operated_or_Branded_Code_Share_Partners',
+       'DOT_ID_Marketing_Airline', 'IATA_Code_Marketing_Airline',
+       'Flight_Number_Marketing_Airline', 'Operating_Airline',
+       'DOT_ID_Operating_Airline', 'IATA_Code_Operating_Airline',
+       'Tail_Number', 'Flight_Number_Operating_Airline', 'OriginAirportID',
+       'OriginAirportSeqID', 'OriginCityMarketID', 'OriginCityName',
+       'OriginState', 'OriginStateFips', 'OriginStateName', 'OriginWac',
+       'DestAirportID', 'DestAirportSeqID', 'DestCityMarketID', 'DestCityName',
+       'DestState', 'DestStateFips', 'DestStateName', 'DestWac', 'DepDel15',
+       'DepartureDelayGroups', 'DepTimeBlk', 'TaxiOut', 'WheelsOff',
+       'WheelsOn', 'TaxiIn', 'CRSArrTime', 'ArrDelay', 'ArrDel15',
+       'ArrivalDelayGroups', 'ArrTimeBlk', 'DistanceGroup',
+       'DivAirportLandings'],
+      dtype='object')array(['GJT', 'HRL', 'DRO', 'IAH', 'DEN', 'TYS', 'MOB', 'LNK', 'BHM',
+       'IAD', 'ECP', 'AEX', 'LFT', 'BTR', 'ABQ', 'BUF', 'ALB', 'HSV',
+       'TUL', 'CPR', 'CRP', 'EWR', 'DCA', 'STL', 'CVG', 'RIC', 'PVD',
+       'CLT', 'GSO', 'ERI', 'ORD', 'LEX', 'ABE', 'CAK', 'AVL', 'DAY',
+       'CHO', 'ROA', 'PWM', 'LIT', 'MKE', 'BTV', 'OMA', 'GRB', 'MLI',
+       'SDF', 'FNT', 'CHS', 'PIT', 'TVC', 'ATW', 'DLH', 'ROC', 'SPI',
+       'HPN', 'MBS', 'CID', 'MYR', 'CAE', 'SGF', 'AVP', 'GRR', 'DSM',
+       'CLE', 'PIA', 'MSN', 'MDT', 'SBN', 'MEM', 'ICT', 'SHV', 'XNA',
+       'DIK', 'GPT', 'PNS', 'LRD', 'LCH', 'MFE', 'FLG', 'BRO', 'SAF',
+       'PQI', 'ORF', 'LGA', 'SYR', 'RDU', 'ILM', 'IND', 'PHL', 'CMH',
+       'SCE', 'ITH', 'JAX', 'OKC', 'JAN', 'GSP', 'TXK', 'ELP', 'MAF',
+       'AUS', 'IDA', 'BNA', 'SAV', 'AMA', 'ATL', 'BDL', 'BLI', 'BOI',
+       'BOS', 'BUR', 'BWI', 'BZN', 'COS', 'DAL', 'DTW', 'EUG', 'FAT',
+       'FLL', 'GEG', 'HDN', 'HNL', 'HOU', 'ISP', 'ITO', 'KOA', 'LAS',
+       'LAX', 'LBB', 'LGB', 'LIH', 'MCI', 'MCO', 'MDW', 'MHT', 'MIA',
+       'MSP', 'MSY', 'MTJ', 'OAK', 'OGG', 'ONT', 'PBI', 'PDX', 'PHX',
+       'PSP', 'RNO', 'RSW', 'SAN', 'SAT', 'SBA', 'SEA', 'SFO', 'SJC',
+       'SJU', 'SLC', 'SMF', 'SNA', 'SRQ', 'TPA', 'TUS', 'VPS', 'DFW',
+       'HHH', 'BFL', 'FAR', 'YUM', 'MLB', 'FSD', 'MRY', 'BMI', 'RAP',
+       'DAB', 'FAY', 'GNV', 'MGM', 'STS', 'TLH', 'MFR', 'JFK', 'AGS',
+       'EYW', 'ORH', 'BGR', 'CHA', 'CRW', 'BQK', 'OAJ', 'LAN', 'AZO',
+       'DHN', 'TRI', 'BIS', 'VLD', 'ABY', 'GTR', 'MLU', 'MOT', 'RST',
+       'CWA', 'CSG', 'EVV', 'GFK', 'FWA', 'BGM', 'STT', 'EGE', 'JAC',
+       'MSO', 'STX', 'GUC', 'PHF', 'PGV', 'ART', 'HTS', 'LYH', 'FLO',
+       'SBY', 'ADQ', 'ANC', 'BET', 'BRW', 'SCC', 'JNU', 'KTN', 'CDV',
+       'YAK', 'FAI', 'SIT', 'PSG', 'WRG', 'OME', 'OTZ', 'PAE', 'ADK',
+       'BQN', 'PSE', 'BIL', 'FCA', 'TTN', 'ILG', 'SWF', 'USA', 'SFB',
+       'PIE', 'AZA', 'RFD', 'GRI', 'PBG', 'PGD', 'PVU', 'TOL', 'BLV',
+       'LCK', 'ELM', 'PSM', 'SCK', 'IAG', 'PSC', 'CKB', 'STC', 'HGR',
+       'OWB', 'SMX', 'GTF', 'RDM', 'OGD', 'PPG', 'GCK', 'ACT', 'ALO',
+       'LAW', 'GGG', 'COU', 'SPS', 'ABI', 'CMI', 'DRT', 'FSM', 'LSE',
+       'TYR', 'GRK', 'DBQ', 'BPT', 'MHK', 'SJT', 'SWO', 'MQT', 'SBP',
+       'CLL', 'ACY', 'LBE', 'EWN', 'ROW', 'SGU', 'ACV', 'ASE', 'XWA',
+       'HLN', 'OTH', 'SLN', 'LWS', 'HOB', 'HYS', 'ALS', 'CNY', 'RKS',
+       'DVL', 'JMS', 'PAH', 'PRC', 'RIW', 'BFF', 'DDC', 'SUX', 'CMX',
+       'MEI', 'JLN', 'EAU', 'GCC', 'SHR', 'TBN', 'FOD', 'LAR', 'VEL',
+       'OGS', 'PUB', 'VCT', 'DEC', 'CYS', 'LBF', 'JST', 'MCW', 'RDD',
+       'SHD', 'CGI', 'EAR', 'MKG', 'LWB', 'LBL', 'COD', 'PIB', 'BTM',
+       'SUN', 'IMT', 'RHI', 'ESC', 'APN', 'ABR', 'PLN', 'INL', 'BRD',
+       'HIB', 'CIU', 'PIH', 'TWF', 'EKO', 'BJI', 'CDC', 'YKM', 'PUW',
+       'ALW', 'EAT', 'DLG', 'AKN', 'GUM', 'SPN', 'BIH', 'WYS', 'ACK',
+       'BKG', 'GST', 'MVY', 'HYA', 'PIR', 'ATY'], dtype=object)Origin
+ATL    183697
+ORD    172169
+DFW    161218
+DEN    158092
+CLT    126088
+LAX    111935
+LGA    100260
+SEA     98884
+LAS     97674
+PHX     96095
+Name: count, dtype: int64/var/folders/sd/d12sh4r54mj2lhgss5g2pf540000gn/T/ipykernel_33998/631439617.py:3: FutureWarning: 
+
+Passing `palette` without assigning `hue` is deprecated and will be removed in v0.14.0. Assign the `x` variable to `hue` and set `legend=False` for the same effect.
+
+  sns.barplot(x=busiest_airports.index, y=busiest_airports.values, palette='viridis')
+<Figure size 1000x600 with 1 Axes><Figure size 1200x600 with 1 Axes><Figure size 1000x800 with 2 Axes>      FlightDate                 Airline Origin Dest  Cancelled  Diverted  \
+1855  2022-04-01  Southwest Airlines Co.    ATL  AUS      False     False   
+1856  2022-04-01  Southwest Airlines Co.    ATL  AUS      False     False   
+1857  2022-04-01  Southwest Airlines Co.    ATL  AUS      False     False   
+1858  2022-04-01  Southwest Airlines Co.    ATL  BNA      False     False   
+1859  2022-04-01  Southwest Airlines Co.    ATL  BNA      False     False   
+
+      CRSDepTime  DepTime  DepDelayMinutes  DepDelay  ...  WheelsOn  TaxiIn  \
+1855         820    832.0             12.0      12.0  ...    1000.0     4.0   
+1856        1440   1505.0             25.0      25.0  ...    1625.0     7.0   
+1857        1955   2105.0             70.0      70.0  ...    2232.0     5.0   
+1858        1510   1547.0             37.0      37.0  ...    1539.0     8.0   
+1859         820    819.0              0.0      -1.0  ...     813.0     5.0   
+
+      CRSArrTime  ArrDelay  ArrDel15  ArrivalDelayGroups  ArrTimeBlk  \
+1855        1000       4.0       0.0                 0.0   1000-1059   
+1856        1615      17.0       1.0                 1.0   1600-1659   
+1857        2135      62.0       1.0                 4.0   2100-2159   
+1858        1510      37.0       1.0                 2.0   1500-1559   
+1859         835     -17.0       0.0                -2.0   0800-0859   
+
+      DistanceGroup  DivAirportLandings  DepHour  
+1855              4                   0        8  
+1856              4                   0       14  
+1857              4                   0       19  
+1858              1                   0       15  
+1859              1                   0        8  
+
+[5 rows x 62 columns]FlightDate               object
+Airline                  object
+Origin                   object
+Dest                     object
+Cancelled                  bool
+Diverted                   bool
+CRSDepTime                int64
+DepTime                 float64
+DepDelayMinutes         float64
+DepDelay                float64
+ArrTime                 float64
+ArrDelayMinutes         float64
+AirTime                 float64
+CRSElapsedTime          float64
+ActualElapsedTime       float64
+Distance                float64
+Year                      int64
+Quarter                   int64
+Month                     int64
+DayofMonth                int64
+DayOfWeek                 int64
+DepDel15                float64
+DepartureDelayGroups    float64
+DepTimeBlk               object
+TaxiOut                 float64
+WheelsOff               float64
+WheelsOn                float64
+TaxiIn                  float64
+CRSArrTime                int64
+ArrDelay                float64
+ArrDel15                float64
+ArrivalDelayGroups      float64
+ArrTimeBlk               object
+DistanceGroup             int64
+DivAirportLandings        int64
+DepHour                   int64
+dtype: object
+3618369714154      TaxiIn  TaxiOut  ArrDel15  DepDel15  DayofMonth  Month  DepTime  \
+1855     4.0     13.0       0.0       0.0           1      4    832.0   
+1856     7.0     11.0       1.0       1.0           1      4   1505.0   
+1857     5.0     18.0       1.0       1.0           1      4   2105.0   
+1858     8.0     14.0       1.0       1.0           1      4   1547.0   
+1859     5.0     14.0       0.0       0.0           1      4    819.0   
+
+      WheelsOff  WheelsOn  Distance  CRSDepTime  CRSArrTime  \
+1855      845.0    1000.0     813.0         820        1000   
+1856     1516.0    1625.0     813.0        1440        1615   
+1857     2123.0    2232.0     813.0        1955        2135   
+1858     1601.0    1539.0     214.0        1510        1510   
+1859      833.0     813.0     214.0         820         835   
+
+                     Airline  AirTime  DepHour  
+1855  Southwest Airlines Co.    135.0        8  
+1856  Southwest Airlines Co.    129.0       14  
+1857  Southwest Airlines Co.    129.0       19  
+1858  Southwest Airlines Co.     38.0       15  
+1859  Southwest Airlines Co.     40.0        8  Total columns - 15
+         CRSDepTime  DepTime  CRSArrTime  WheelsOff  WheelsOn
+1855            820    832.0        1000      845.0    1000.0
+1856           1440   1505.0        1615     1516.0    1625.0
+1857           1955   2105.0        2135     2123.0    2232.0
+1858           1510   1547.0        1510     1601.0    1539.0
+1859            820    819.0         835      833.0     813.0
+...             ...      ...         ...        ...       ...
+4077926        1929   1940.0        2120     1957.0    2108.0
+4077960        1952   2027.0        2220     2050.0    2221.0
+4078230        1947   2016.0        2200     2105.0      23.0
+4078259        1704   1933.0        1918     1955.0    2145.0
+4078304        1202   1158.0        1422     1216.0    1358.0
+
+[183697 rows x 5 columns]TaxiIn            float64
+TaxiOut           float64
+ArrDel15          float64
+DepDel15          float64
+DayofMonth          int64
+Month               int64
+Distance          float64
+Airline            object
+AirTime           float64
+DepHour             int64
+CRSDepTime_sin    float64
+CRSDepTime_cos    float64
+DepTime_sin       float64
+DepTime_cos       float64
+CRSArrTime_sin    float64
+CRSArrTime_cos    float64
+WheelsOff_sin     float64
+WheelsOff_cos     float64
+WheelsOn_sin      float64
+WheelsOn_cos      float64
+dtype: object
+0Missing Values :
+TaxiIn            3453
+TaxiOut           3425
+ArrDel15          3845
+DepDel15          3388
+DayofMonth           0
+Month                0
+Distance             0
+Airline              0
+AirTime           3845
+DepHour              0
+CRSDepTime_sin       0
+CRSDepTime_cos       0
+DepTime_sin       3388
+DepTime_cos       3388
+CRSArrTime_sin       0
+CRSArrTime_cos       0
+WheelsOff_sin     3425
+WheelsOff_cos     3425
+WheelsOn_sin      3453
+WheelsOn_cos      3453
+dtype: int64
+ArrDel15
+0.0    144410
+1.0     35442
+Name: count, dtype: int64ColumnTransformer(remainder='passthrough',
+                  transformers=[('num',
+                                 Pipeline(steps=[('simpleimputer',
+                                                  SimpleImputer()),
+                                                 ('standardscaler',
+                                                  StandardScaler())]),
+                                 ['TaxiIn', 'TaxiOut', 'DayofMonth', 'Month',
+                                  'Distance', 'AirTime', 'DepHour',
+                                  'CRSDepTime_sin', 'CRSDepTime_cos',
+                                  'DepTime_sin', 'DepTime_cos',
+                                  'CRSArrTime_sin', 'CRSArrTime_cos',
+                                  'WheelsOff_sin', 'WheelsOff_cos',
+                                  'WheelsOn_sin', 'WheelsOn_cos']),
+                                ('cat',
+                                 Pipeline(steps=[('simpleimputer',
+                                                  SimpleImputer(strategy='most_frequent')),
+                                                 ('onehotencoder',
+                                                  OneHotEncoder())]),
+                                 ['Airline'])])   num__TaxiIn  num__TaxiOut  num__DayofMonth  num__Month  num__Distance  \
+0    -0.473227     -0.357425        -1.681281   -0.041593       0.318981   
+1     0.060996     -0.654760        -1.681281   -0.041593       0.318981   
+2    -0.295153      0.385911        -1.681281   -0.041593       0.318981   
+3     0.239070     -0.208758        -1.681281   -0.041593      -0.919552   
+4    -0.295153     -0.208758        -1.681281   -0.041593      -0.919552   
+
+   num__AirTime  num__DepHour  num__CRSDepTime_sin  num__CRSDepTime_cos  \
+0      0.669132     -1.287733             1.552464            -0.473714   
+1      0.569899     -0.075297            -0.651478            -0.760555   
+2      0.569899      0.935066            -1.004152             1.097934   
+3     -0.935133      0.126775            -0.793925            -0.625748   
+4     -0.902055     -1.287733             1.552464            -0.473714   
+
+   num__DepTime_sin  ...  cat__Airline_Frontier Airlines Inc.  \
+0          1.531226  ...                                  0.0   
+1         -0.789315  ...                                  0.0   
+2         -0.741916  ...                                  0.0   
+3         -0.964345  ...                                  0.0   
+4          1.582904  ...                                  0.0   
+
+   cat__Airline_JetBlue Airways  cat__Airline_Mesa Airlines Inc.  \
+0                           0.0                              0.0   
+1                           0.0                              0.0   
+2                           0.0                              0.0   
+3                           0.0                              0.0   
+4                           0.0                              0.0   
+
+   cat__Airline_Republic Airlines  cat__Airline_SkyWest Airlines Inc.  \
+0                             0.0                                 0.0   
+1                             0.0                                 0.0   
+2                             0.0                                 0.0   
+3                             0.0                                 0.0   
+4                             0.0                                 0.0   
+
+   cat__Airline_Southwest Airlines Co.  cat__Airline_Spirit Air Lines  \
+0                                  1.0                            0.0   
+1                                  1.0                            0.0   
+2                                  1.0                            0.0   
+3                                  1.0                            0.0   
+4                                  1.0                            0.0   
+
+   cat__Airline_United Air Lines Inc.  remainder__ArrDel15  \
+0                                 0.0                  0.0   
+1                                 0.0                  1.0   
+2                                 0.0                  1.0   
+3                                 0.0                  1.0   
+4                                 0.0                  0.0   
+
+   remainder__DepDel15  
+0                  0.0  
+1                  1.0  
+2                  1.0  
+3                  1.0  
+4                  0.0  
+
+[5 rows x 33 columns]Missing Values Count for Each Column:
+num__TaxiIn                               0
+num__TaxiOut                              0
+num__DayofMonth                           0
+num__Month                                0
+num__Distance                             0
+num__AirTime                              0
+num__DepHour                              0
+num__CRSDepTime_sin                       0
+num__CRSDepTime_cos                       0
+num__DepTime_sin                          0
+num__DepTime_cos                          0
+num__CRSArrTime_sin                       0
+num__CRSArrTime_cos                       0
+num__WheelsOff_sin                        0
+num__WheelsOff_cos                        0
+num__WheelsOn_sin                         0
+num__WheelsOn_cos                         0
+cat__Airline_Alaska Airlines Inc.         0
+cat__Airline_American Airlines Inc.       0
+cat__Airline_Comair Inc.                  0
+cat__Airline_Delta Air Lines Inc.         0
+cat__Airline_Endeavor Air Inc.            0
+cat__Airline_Envoy Air                    0
+cat__Airline_Frontier Airlines Inc.       0
+cat__Airline_JetBlue Airways              0
+cat__Airline_Mesa Airlines Inc.           0
+cat__Airline_Republic Airlines            0
+cat__Airline_SkyWest Airlines Inc.        0
+cat__Airline_Southwest Airlines Co.       0
+cat__Airline_Spirit Air Lines             0
+cat__Airline_United Air Lines Inc.        0
+remainder__ArrDel15                    3845
+remainder__DepDel15                    3388
+dtype: int64
+Missing Values Count for Each Column:
+num__TaxiIn                            0
+num__TaxiOut                           0
+num__DayofMonth                        0
+num__Month                             0
+num__Distance                          0
+num__AirTime                           0
+num__DepHour                           0
+num__CRSDepTime_sin                    0
+num__CRSDepTime_cos                    0
+num__DepTime_sin                       0
+num__DepTime_cos                       0
+num__CRSArrTime_sin                    0
+num__CRSArrTime_cos                    0
+num__WheelsOff_sin                     0
+num__WheelsOff_cos                     0
+num__WheelsOn_sin                      0
+num__WheelsOn_cos                      0
+cat__Airline_Alaska Airlines Inc.      0
+cat__Airline_American Airlines Inc.    0
+cat__Airline_Comair Inc.               0
+cat__Airline_Delta Air Lines Inc.      0
+cat__Airline_Endeavor Air Inc.         0
+cat__Airline_Envoy Air                 0
+cat__Airline_Frontier Airlines Inc.    0
+cat__Airline_JetBlue Airways           0
+cat__Airline_Mesa Airlines Inc.        0
+cat__Airline_Republic Airlines         0
+cat__Airline_SkyWest Airlines Inc.     0
+cat__Airline_Southwest Airlines Co.    0
+cat__Airline_Spirit Air Lines          0
+cat__Airline_United Air Lines Inc.     0
+remainder__ArrDel15                    0
+remainder__DepDel15                    0
+dtype: int64
+Data Types of Columns:
+num__TaxiIn                            float64
+num__TaxiOut                           float64
+num__DayofMonth                        float64
+num__Month                             float64
+num__Distance                          float64
+num__AirTime                           float64
+num__DepHour                           float64
+num__CRSDepTime_sin                    float64
+num__CRSDepTime_cos                    float64
+num__DepTime_sin                       float64
+num__DepTime_cos                       float64
+num__CRSArrTime_sin                    float64
+num__CRSArrTime_cos                    float64
+num__WheelsOff_sin                     float64
+num__WheelsOff_cos                     float64
+num__WheelsOn_sin                      float64
+num__WheelsOn_cos                      float64
+cat__Airline_Alaska Airlines Inc.      float64
+cat__Airline_American Airlines Inc.    float64
+cat__Airline_Comair Inc.               float64
+cat__Airline_Delta Air Lines Inc.      float64
+cat__Airline_Endeavor Air Inc.         float64
+cat__Airline_Envoy Air                 float64
+cat__Airline_Frontier Airlines Inc.    float64
+cat__Airline_JetBlue Airways           float64
+cat__Airline_Mesa Airlines Inc.        float64
+cat__Airline_Republic Airlines         float64
+cat__Airline_SkyWest Airlines Inc.     float64
+cat__Airline_Southwest Airlines Co.    float64
+cat__Airline_Spirit Air Lines          float64
+cat__Airline_United Air Lines Inc.     float64
+remainder__ArrDel15                    float64
+remainder__DepDel15                    float64
+dtype: object
+(179852, 33)((143881, 32), (143881,), (35971, 32), (35971,))Random Forest Accuracy: 0.9628033693808902
+Logistic Regression Accuracy: 0.9326401823691307
+/Users/liam/Desktop/flight-prediction/.venv/lib/python3.11/site-packages/sklearn/linear_model/_logistic.py:473: ConvergenceWarning: lbfgs failed to converge after 100 iteration(s) (status=1):
+STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT
+
+Increase the number of iterations to improve the convergence (max_iter=100).
+You might also want to scale the data as shown in:
+    https://scikit-learn.org/stable/modules/preprocessing.html
+Please also refer to the documentation for alternative solver options:
+    https://scikit-learn.org/stable/modules/linear_model.html#logistic-regression
+  n_iter_i = _check_optimize_result(
+/Users/liam/Desktop/flight-prediction/.venv/lib/python3.11/site-packages/sklearn/utils/validation.py:2749: UserWarning: X does not have valid feature names, but KNeighborsClassifier was fitted with feature names
+  warnings.warn(
+kNN Accuracy: 0.9259125406577521
+<Figure size 500x500 with 1 Axes><Figure size 500x500 with 1 Axes><Figure size 500x500 with 1 Axes>Classification Report - kNN Model:
+              precision    recall  f1-score   support
+
+           0       0.95      0.96      0.95     28812
+           1       0.83      0.78      0.81      7159
+
+    accuracy                           0.93     35971
+   macro avg       0.89      0.87      0.88     35971
+weighted avg       0.92      0.93      0.93     35971
+
+
+Classification Report - Logistic Regression Model:
+              precision    recall  f1-score   support
+
+           0       0.96      0.95      0.96     28812
+           1       0.82      0.85      0.83      7159
+
+    accuracy                           0.93     35971
+   macro avg       0.89      0.90      0.90     35971
+weighted avg       0.93      0.93      0.93     35971
+
+
+Classification Report - Random Forest Model:
+              precision    recall  f1-score   support
+
+           0       0.97      0.98      0.98     28812
+           1       0.92      0.89      0.90      7159
+
+    accuracy                           0.96     35971
+   macro avg       0.95      0.93      0.94     35971
+weighted avg       0.96      0.96      0.96     35971
+
+<Figure size 800x600 with 1 Axes><Figure size 800x600 with 1 Axes><Figure size 800x600 with 1 Axes>Fitting 5 folds for each of 10 candidates, totalling 50 fits
+[CV] END bootstrap=True, max_depth=None, min_samples_leaf=1, min_samples_split=2, n_estimators=100; total time=  21.5s
+[CV] END bootstrap=True, max_depth=None, min_samples_leaf=1, min_samples_split=2, n_estimators=100; total time=  21.4s
+[CV] END bootstrap=True, max_depth=None, min_samples_leaf=1, min_samples_split=2, n_estimators=100; total time=  21.2s
+[CV] END bootstrap=True, max_depth=None, min_samples_leaf=1, min_samples_split=2, n_estimators=100; total time=  21.6s
+[CV] END bootstrap=True, max_depth=None, min_samples_leaf=1, min_samples_split=2, n_estimators=100; total time=  21.9s
+[CV] END bootstrap=True, max_depth=10, min_samples_leaf=2, min_samples_split=5, n_estimators=100; total time=  11.0s
+[CV] END bootstrap=True, max_depth=10, min_samples_leaf=2, min_samples_split=5, n_estimators=100; total time=  11.1s
+[CV] END bootstrap=True, max_depth=10, min_samples_leaf=2, min_samples_split=5, n_estimators=100; total time=  11.5s
+[CV] END bootstrap=True, max_depth=10, min_samples_leaf=2, min_samples_split=5, n_estimators=100; total time=  11.5s
+[CV] END bootstrap=True, max_depth=None, min_samples_leaf=2, min_samples_split=2, n_estimators=200; total time=  42.6s
+[CV] END bootstrap=True, max_depth=None, min_samples_leaf=2, min_samples_split=2, n_estimators=200; total time=  42.4s
+[CV] END bootstrap=True, max_depth=None, min_samples_leaf=1, min_samples_split=2, n_estimators=200; total time=  43.4s
+[CV] END bootstrap=True, max_depth=None, min_samples_leaf=2, min_samples_split=2, n_estimators=200; total time=  43.4s
+[CV] END bootstrap=True, max_depth=None, min_samples_leaf=2, min_samples_split=2, n_estimators=200; total time=  43.3s
+[CV] END bootstrap=True, max_depth=10, min_samples_leaf=2, min_samples_split=5, n_estimators=100; total time=  11.1s
+[CV] END bootstrap=True, max_depth=None, min_samples_leaf=1, min_samples_split=2, n_estimators=200; total time=  43.7s
+[CV] END bootstrap=True, max_depth=None, min_samples_leaf=1, min_samples_split=2, n_estimators=200; total time=  43.8s
+[CV] END bootstrap=True, max_depth=None, min_samples_leaf=1, min_samples_split=2, n_estimators=200; total time=  44.2s
+[CV] END bootstrap=True, max_depth=None, min_samples_leaf=1, min_samples_split=2, n_estimators=200; total time=  44.3s
+[CV] END bootstrap=True, max_depth=10, min_samples_leaf=1, min_samples_split=2, n_estimators=100; total time=  11.4s
+[CV] END bootstrap=True, max_depth=10, min_samples_leaf=2, min_samples_split=2, n_estimators=200; total time=  22.4s
+[CV] END bootstrap=True, max_depth=10, min_samples_leaf=2, min_samples_split=2, n_estimators=200; total time=  22.6s
+[CV] END bootstrap=True, max_depth=10, min_samples_leaf=2, min_samples_split=2, n_estimators=200; total time=  23.2s
+[CV] END bootstrap=True, max_depth=10, min_samples_leaf=1, min_samples_split=2, n_estimators=100; total time=  11.4s
+[CV] END bootstrap=True, max_depth=10, min_samples_leaf=1, min_samples_split=2, n_estimators=100; total time=  12.1s
+[CV] END bootstrap=True, max_depth=None, min_samples_leaf=2, min_samples_split=2, n_estimators=200; total time=  43.8s
+[CV] END bootstrap=True, max_depth=10, min_samples_leaf=2, min_samples_split=2, n_estimators=200; total time=  23.1s
+[CV] END bootstrap=True, max_depth=10, min_samples_leaf=1, min_samples_split=5, n_estimators=200; total time=  22.4s
+[CV] END bootstrap=True, max_depth=10, min_samples_leaf=2, min_samples_split=2, n_estimators=200; total time=  23.3s
+[CV] END bootstrap=True, max_depth=10, min_samples_leaf=1, min_samples_split=5, n_estimators=200; total time=  22.8s
+[CV] END bootstrap=True, max_depth=10, min_samples_leaf=1, min_samples_split=5, n_estimators=200; total time=  23.1s
+[CV] END bootstrap=True, max_depth=10, min_samples_leaf=1, min_samples_split=2, n_estimators=100; total time=  11.3s
+[CV] END bootstrap=True, max_depth=10, min_samples_leaf=1, min_samples_split=5, n_estimators=200; total time=  23.0s
+[CV] END bootstrap=True, max_depth=10, min_samples_leaf=1, min_samples_split=5, n_estimators=200; total time=  23.2s
+[CV] END bootstrap=True, max_depth=10, min_samples_leaf=1, min_samples_split=2, n_estimators=100; total time=  11.2s
+[CV] END bootstrap=True, max_depth=10, min_samples_leaf=1, min_samples_split=2, n_estimators=200; total time=  22.5s
+[CV] END bootstrap=True, max_depth=10, min_samples_leaf=1, min_samples_split=2, n_estimators=200; total time=  22.8s
+[CV] END bootstrap=True, max_depth=10, min_samples_leaf=1, min_samples_split=2, n_estimators=200; total time=  22.9s
+[CV] END bootstrap=True, max_depth=10, min_samples_leaf=1, min_samples_split=2, n_estimators=200; total time=  22.7s
+[CV] END bootstrap=True, max_depth=None, min_samples_leaf=1, min_samples_split=5, n_estimators=100; total time=  21.0s
+[CV] END bootstrap=True, max_depth=None, min_samples_leaf=1, min_samples_split=5, n_estimators=100; total time=  20.9s
+[CV] END bootstrap=True, max_depth=None, min_samples_leaf=1, min_samples_split=5, n_estimators=100; total time=  21.1s
+[CV] END bootstrap=True, max_depth=10, min_samples_leaf=1, min_samples_split=2, n_estimators=200; total time=  21.7s
+[CV] END bootstrap=True, max_depth=None, min_samples_leaf=1, min_samples_split=5, n_estimators=100; total time=  20.7s
+[CV] END bootstrap=True, max_depth=None, min_samples_leaf=1, min_samples_split=5, n_estimators=100; total time=  20.8s
+[CV] END bootstrap=True, max_depth=10, min_samples_leaf=2, min_samples_split=5, n_estimators=200; total time=  21.0s
+[CV] END bootstrap=True, max_depth=10, min_samples_leaf=2, min_samples_split=5, n_estimators=200; total time=  21.1s
+[CV] END bootstrap=True, max_depth=10, min_samples_leaf=2, min_samples_split=5, n_estimators=200; total time=  21.2s
+[CV] END bootstrap=True, max_depth=10, min_samples_leaf=2, min_samples_split=5, n_estimators=200; total time=  21.0s
+[CV] END bootstrap=True, max_depth=10, min_samples_leaf=2, min_samples_split=5, n_estimators=200; total time=  16.7s
+/Users/liam/Desktop/flight-prediction/.venv/lib/python3.11/site-packages/sklearn/utils/validation.py:2749: UserWarning: X does not have valid feature names, but RandomForestClassifier was fitted with feature names
+  warnings.warn(
+Best Random Forest Accuracy: 0.963136971449223
