@@ -1,0 +1,6 @@
+model_name,accuracy,precision_class_0,precision_class_1,recall_class_0,recall_class_1,f1_score_class_0,f1_score_class_1,macro_avg_precision,macro_avg_recall,macro_avg_f1,weighted_avg_precision,weighted_avg_recall,weighted_avg_f1,support_class_0,support_class_1,total_support
+kNN,0.9259,0.95,0.83,0.96,0.78,0.95,0.81,0.89,0.87,0.88,0.92,0.93,0.93,28812,7159,35971
+Logistic Regression,0.9326,0.96,0.82,0.95,0.85,0.96,0.83,0.89,0.90,0.90,0.93,0.93,0.93,28812,7159,35971
+Random Forest,0.9628,0.97,0.92,0.98,0.89,0.98,0.90,0.95,0.93,0.94,0.96,0.96,0.96,28812,7159,35971
+Random Forest (Tuned),0.9631,0.97,0.92,0.98,0.89,0.98,0.90,0.95,0.94,0.94,0.96,0.96,0.96,28812,7159,35971
+
