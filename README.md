@@ -1,61 +1,20 @@
-# Data_Mining_Senior_Project
+# Data Mining Project (Fall 2025)
 
-<a target="_blank" href="https://cookiecutter-data-science.drivendata.org/">
-    <img src="https://img.shields.io/badge/CCDS-Project%20template-328F97?logo=cookiecutter" />
-</a>
+## **Mining Patterns from Large-Scale Flight Data:**<br>**Feature Engineering and Classification for Delay Prediction at ATL**
 
-[GSU] Data Mining Senior Project - Mining Projects from Large-Scale Flight Data: Feature Engineering & Classification for Delay Prediction aHartsfield-Jackson Atlanta Airport
+## Abstract 
 
-## Project Organization
+Flight operations generate massive volumes of data containing valuable patterns for predicting delays and optimizing operations. This paper presents a comprehensive data mining approach for extracting knowledge from large-scale flight records to predict arrival delays. Working with over 4 million flight records from 2022, we develop a systematic methodology encompassing data cleaning, feature engineering, dimensionality reduction, and classification. We focus on flights from Hartsfield-Jackson Atlanta International Airport, applying three classification algorithms to the processed data. Our analysis reveals that cyclical encoding of temporal features and careful handling of class imbalance are critical for achieving high prediction accuracy. The Random Forest classifier achieves 96.31% accuracy on 179,852 flight records, correctly identifying 89% of delayed flights. We provide detailed insights into data preprocessing pipelines, feature importance patterns, and the impact of various preprocessing decisions on model performance. Our findings demonstrate that systematic data mining workflows can extract actionable knowledge from complex aviation datasets to support operational decision-making. Index Terms—data mining, flight delay prediction, feature engineering, classification, imbalanced data, knowledge discovery
 
-```
-├── LICENSE            <- Open-source license if one is chosen
-├── Makefile           <- Makefile with convenience commands like `make data` or `make train`
-├── README.md          <- The top-level README for developers using this project.
-├── data
-│   ├── external       <- Data from third party sources.
-│   ├── interim        <- Intermediate data that has been transformed.
-│   ├── processed      <- The final, canonical data sets for modeling.
-│   └── raw            <- The original, immutable data dump.
-│
-├── docs               <- A default mkdocs project; see www.mkdocs.org for details
-│
-├── models             <- Trained and serialized models, model predictions, or model summaries
-│
-├── notebooks          <- Jupyter notebooks. Naming convention is a number (for ordering),
-│                         the creator's initials, and a short `-` delimited description, e.g.
-│                         `1.0-jqp-initial-data-exploration`.
-│
-├── pyproject.toml     <- Project configuration file with package metadata for 
-│                         dm_sr_project and configuration for tools like black
-│
-├── references         <- Data dictionaries, manuals, and all other explanatory materials.
-│
-├── reports            <- Generated analysis as HTML, PDF, LaTeX, etc.
-│   └── figures        <- Generated graphics and figures to be used in reporting
-│
-├── requirements.txt   <- The requirements file for reproducing the analysis environment, e.g.
-│                         generated with `pip freeze > requirements.txt`
-│
-├── setup.cfg          <- Configuration file for flake8
-│
-└── dm_sr_project   <- Source code for use in this project.
-    │
-    ├── __init__.py             <- Makes dm_sr_project a Python module
-    │
-    ├── config.py               <- Store useful variables and configuration
-    │
-    ├── dataset.py              <- Scripts to download or generate data
-    │
-    ├── features.py             <- Code to create features for modeling
-    │
-    ├── modeling                
-    │   ├── __init__.py 
-    │   ├── predict.py          <- Code to run model inference with trained models          
-    │   └── train.py            <- Code to train models
-    │
-    └── plots.py                <- Code to create visualizations
-```
+## 🧑‍🚀 Team
 
---------
+We are an student research team bringing together our technical expertise to build models aimed at gleaning actionable knowledge to better predict flight delays.
 
+Data Science Team (Alphabetically): Joshua Piña, Yuntian Wu
+
+
+##  Development Environment
+
+This project uses [GitHub Codespaces](https://github.com/features/codespaces) to ensure a consistent, reproducible development setup.
+
+---
