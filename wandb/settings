@@ -1,0 +1,5 @@
+[default]
+entity = joshuadariuspina-georgia-state-university
+project = Data Mining - Senior Project
+base_url = https://api.wandb.ai
+
