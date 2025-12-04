@@ -143,9 +143,7 @@ if __name__ == "__main__":
     print("Go to the W&B Dashboard URL shown above to monitor results.")
     print("="*80)
 
-    # Start the W&B agent to run the training function multiple times
     # Set 'count' to a high number (e.g., 200, 500) to run overnight.
-    # The agent will automatically call train_sweep_run() repeatedly.
     # Change the count based on how many hours you want it to run.
     wandb.agent(sweep_id, function=train_sweep_run, count=100) 
     
