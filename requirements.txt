@@ -13,4 +13,4 @@ ruff
 scikit-learn
 tqdm
 typer
--e .
+

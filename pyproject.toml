@@ -3,7 +3,7 @@ requires = ["flit_core >=3.2,<4"]
 build-backend = "flit_core.buildapi"
 
 [project]
-name = "dm_sr_project"
+name = "flight_status_prediction"
 version = "0.0.1"
 description = "GSU Data Mining Senior Project - Mining Projects from Large-Scale Flight Data: Feature Engineering \u0026 Classification for Delay Prediction aHartsfield-Jackson Atlanta Airport"
 authors = [
@@ -20,13 +20,13 @@ requires-python = "~=3.12.0"
 
 [tool.ruff]
 line-length = 99
-src = ["dm_sr_project"]
-include = ["pyproject.toml", "dm_sr_project/**/*.py"]
+src = ["flight_status_prediction"]
+include = ["pyproject.toml", "flight_status_prediction/**/*.py"]
 
 [tool.ruff.lint]
 extend-select = ["I"]  # Add import sorting
 
 [tool.ruff.lint.isort]
-known-first-party = ["dm_sr_project"]
+known-first-party = ["flight_status_prediction"]
 force-sort-within-sections = true
 
