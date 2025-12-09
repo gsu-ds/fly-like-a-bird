@@ -1,6 +1,8 @@
 # Data Mining Project (Fall 2025)
-
+> ##### The final presentation and research paper can be found at `reports/data_mining_final_reports`
 ## **Mining Patterns from Large-Scale Flight Data:**<br>**Feature Engineering and Classification for Delay Prediction at ATL**
+
+
 
 ## Abstract 
 
